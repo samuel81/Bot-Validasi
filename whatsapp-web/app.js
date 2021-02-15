@@ -58,6 +58,7 @@ let number_whitelist = [
   '6289506306694',
   '6285322260139',
   '6281211968621',
+  '6282181044624',
 ];
 
 client.on('message', async (msg) => {
