@@ -81,8 +81,8 @@ function sendFile(number, file, message) {
     number.startsWith('62')
       ? `${number}@c.us`
       : number.startsWith('0')
-      ? '62' + number.slice(1, number.length) + '@c.us'
-      : '62' + number + '@c.us',
+        ? '62' + number.slice(1, number.length) + '@c.us'
+        : '62' + number + '@c.us',
     file
   );
   sendChat(number, message);
@@ -93,8 +93,8 @@ function sendChat(number, message) {
     number.startsWith('62')
       ? `${number}@c.us`
       : number.startsWith('0')
-      ? '62' + number.slice(1, number.length) + '@c.us'
-      : '62' + number + '@c.us',
+        ? '62' + number.slice(1, number.length) + '@c.us'
+        : '62' + number + '@c.us',
     message
   );
 }
