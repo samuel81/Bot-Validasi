@@ -40,4 +40,9 @@ io.on('connection', (socket) => {
   socket.on('send-log', (number, file, message, fileName) => {
     io.in('message-sender').emit('send-log', number, file, message, fileName);
   });
+
+  socket.on('report', ()=> {
+    io.in('service').emit('report', '');
+  });
+
 });

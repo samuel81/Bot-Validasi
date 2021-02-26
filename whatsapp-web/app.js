@@ -72,6 +72,8 @@ client.on('message', async (msg) => {
       msg.reply(
         validator.bukaValidasi(sender_number, msg.body.replace('=unvalid ', ''))
       );
+    } else if(msg.body === '=report') {
+      msg.reply(validator.requestReport());
     }
   }
 });

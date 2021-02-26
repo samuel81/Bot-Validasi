@@ -80,3 +80,8 @@ exports.tutupValidasi = (number, message) => {
     return 'Request invalid format, correct format: =valid {kecamatan} {kelurahan} {list_nib}';
   }
 };
+
+exports.requestReport = () => {
+  socket.emit('report', '');
+  return "Menyiapkan report..."
+}
