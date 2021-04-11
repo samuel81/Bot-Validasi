@@ -52,8 +52,8 @@ exports.bukaValidasi = (number, message) => {
   if (sp.length == 3) {
     emitBukaValidasi(
       number,
-      sp[0].replace(/_/g, ' ').toUpperCase(),
-      sp[1].replace(/_/g, ' ').toUpperCase(),
+      sp[0].replaceAll('_', ' ').toUpperCase(),
+      sp[1].replaceAll('_', ' ').toUpperCase(),
       sp[2]
     );
     return 'Memproses request... Harap tunggu...';
@@ -71,8 +71,8 @@ exports.tutupValidasi = (number, message) => {
   if (sp.length == 3) {
     emitTutupValidasi(
       number,
-      sp[0].replace('_', ' ').toUpperCase(),
-      sp[1].replace('_', ' ').toUpperCase(),
+      sp[0].replaceAll('_', ' ').toUpperCase(),
+      sp[1].replaceAll('_', ' ').toUpperCase(),
       sp[2]
     );
     return 'Memproses request... Harap tunggu...';
