@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { Client, MessageMedia } = require('whatsapp-web.js');
 
+// Session file for stroring whatsapp client
 const SESSION_FILE_PATH = './session.json';
 let sessionCfg;
 if (fs.existsSync(SESSION_FILE_PATH)) {
@@ -17,6 +18,7 @@ client.on('qr', (qr) => {
   console.log('QR RECEIVED', qr);
 });
 
+// Authenticated
 client.on('authenticated', (session) => {
   console.log('AUTHENTICATED', session);
   sessionCfg = session;
